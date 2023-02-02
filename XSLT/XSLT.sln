@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLT", "XSLT.Groupping\XSLT.csproj", "{9914250C-9204-4818-A204-DF0DC42AAB72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSLT.Viewer", "XSLT.Viewer\XSLT.Viewer.csproj", "{65458283-72EE-4543-970D-5BA742DF1457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9914250C-9204-4818-A204-DF0DC42AAB72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9914250C-9204-4818-A204-DF0DC42AAB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9914250C-9204-4818-A204-DF0DC42AAB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9914250C-9204-4818-A204-DF0DC42AAB72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65458283-72EE-4543-970D-5BA742DF1457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65458283-72EE-4543-970D-5BA742DF1457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65458283-72EE-4543-970D-5BA742DF1457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65458283-72EE-4543-970D-5BA742DF1457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A425956-FE9B-432F-8690-873F856F0899}
+	EndGlobalSection
+EndGlobal
