@@ -50,13 +50,15 @@ namespace XSLT.Viewer
         public void Browse(string tag)
         {
             var outputInput = XSLT.Enums.EnumConverter.GetOutputInput(tag);
+            var filePath = m_fileProvider.GetFileName();
+            var isFilePathEmpty = filePath.Equals(string.Empty);
             switch (outputInput)
             {
                 case Enums.OutputInput.Output:
-                    PathToOutputFile = m_fileProvider.GetFileName();
+                    PathToOutputFile = isFilePathEmpty ? PathToOutputFile : filePath;
                     break;
                 case Enums.OutputInput.Input:
-                    PathToInputFile = m_fileProvider.GetFileName();
+                    PathToInputFile = isFilePathEmpty ? PathToInputFile : filePath;
                     break;
                 case Enums.OutputInput.Unknown:
                 default:

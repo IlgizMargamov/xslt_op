@@ -61,6 +61,15 @@ namespace XSLT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to group.
+        /// </summary>
+        internal static string Group_LowCase {
+            get {
+                return ResourceManager.GetString("Group_LowCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;groups&gt;
         ///    &lt;group name=&quot;1&quot;&gt;
@@ -90,27 +99,72 @@ namespace XSLT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to groups.
+        /// </summary>
+        internal static string Groups_LowCase {
+            get {
+                return ResourceManager.GetString("Groups_LowCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item.
+        /// </summary>
+        internal static string Item_LowCase {
+            get {
+                return ResourceManager.GetString("Item_LowCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to itemsCount.
+        /// </summary>
+        internal static string ItemsCount_LowCase {
+            get {
+                return ResourceManager.GetString("ItemsCount_LowCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;list&gt;
-        ///    &lt;item name=&quot;1&quot; group=&quot;1&quot;/&gt;
-        ///    &lt;item name=&quot;2&quot; group=&quot;1&quot;/&gt;
-        ///    &lt;item name=&quot;5&quot; group=&quot;3&quot;/&gt;
-        ///    &lt;item name=&quot;3&quot; group=&quot;2&quot;/&gt;
-        ///    &lt;item name=&quot;4&quot; group=&quot;2&quot;/&gt;
-        ///    &lt;item name=&quot;11&quot; group=&quot;1&quot;/&gt;
-        ///    &lt;item name=&quot;22&quot; group=&quot;1&quot;/&gt;
-        ///    &lt;item name=&quot;33&quot; group=&quot;1&quot;/&gt;
-        ///    &lt;item name=&quot;44&quot; group=&quot;3&quot;/&gt;
-        ///    &lt;item name=&quot;55&quot; group=&quot;3&quot;/&gt;
-        ///    &lt;item name=&quot;111&quot; group=&quot;2&quot;/&gt;
-        ///    &lt;item name=&quot;222&quot; group=&quot;2&quot;/&gt;
-        ///    &lt;item name=&quot;333&quot; group=&quot;2&quot;/&gt;
-        ///    &lt;item name=&quot;444&quot; group=&quot;1&quot;/&gt;
-        ///    [rest of string was truncated]&quot;;.
+        ///&lt;list itemsCount=&quot;15&quot;&gt;
+        ///  &lt;item name=&quot;1&quot; group=&quot;1&quot; /&gt;
+        ///  &lt;item name=&quot;2&quot; group=&quot;1&quot; /&gt;
+        ///  &lt;item name=&quot;5&quot; group=&quot;3&quot; /&gt;
+        ///  &lt;item name=&quot;3&quot; group=&quot;2&quot; /&gt;
+        ///  &lt;item name=&quot;4&quot; group=&quot;2&quot; /&gt;
+        ///  &lt;item name=&quot;11&quot; group=&quot;1&quot; /&gt;
+        ///  &lt;item name=&quot;22&quot; group=&quot;1&quot; /&gt;
+        ///  &lt;item name=&quot;33&quot; group=&quot;1&quot; /&gt;
+        ///  &lt;item name=&quot;44&quot; group=&quot;3&quot; /&gt;
+        ///  &lt;item name=&quot;55&quot; group=&quot;3&quot; /&gt;
+        ///  &lt;item name=&quot;111&quot; group=&quot;2&quot; /&gt;
+        ///  &lt;item name=&quot;222&quot; group=&quot;2&quot; /&gt;
+        ///  &lt;item name=&quot;333&quot; group=&quot;2&quot; /&gt;
+        ///  &lt;item name=&quot;444&quot; group=&quot;1&quot; /&gt;
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string List {
             get {
                 return ResourceManager.GetString("List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to list.
+        /// </summary>
+        internal static string List_LowCase {
+            get {
+                return ResourceManager.GetString("List_LowCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to name.
+        /// </summary>
+        internal static string Name_LowCase {
+            get {
+                return ResourceManager.GetString("Name_LowCase", resourceCulture);
             }
         }
     }

@@ -19,19 +19,19 @@ namespace XSLT.Implementations
 
         private static List<GroupInfo> GetGroups(string pathToOutputFile, IEnumerable<IGrouping<string, ItemInfo>> grouppedList)
         {
-            var outputDoc = new XDocument(new XElement("groups"));
+            var outputDoc = new XDocument(new XElement(Resources.Groups_LowCase));
 
             var groups = new List<GroupInfo>();
             foreach (var group in grouppedList)
             {
-                var xmlGroup = new XElement("group", new XAttribute("name", group.Key));
+                var xmlGroup = new XElement(Resources.Group_LowCase, new XAttribute(Resources.Name_LowCase, group.Key));
                 foreach (var itemInfo in group)
                 {
-                    xmlGroup.Add(new XElement("item", new XAttribute("name", itemInfo.ItemName)));
+                    xmlGroup.Add(new XElement(Resources.Item_LowCase, new XAttribute(Resources.Name_LowCase, itemInfo.ItemName)));
                 }
                 var itemsCount = group.Count();
 
-                xmlGroup.Add(new XAttribute("itemCount", itemsCount));
+                xmlGroup.Add(new XAttribute(Resources.ItemsCount_LowCase, itemsCount));
                 outputDoc.Root.Add(xmlGroup);
                 groups.Add(new GroupInfo(group.Key, itemsCount));
             }
@@ -46,33 +46,36 @@ namespace XSLT.Implementations
             inputDoc.Load(pathToInputFile);
 
             var list = new List<ItemInfo>();
-            foreach (var node in from XmlNode node in inputDoc.ChildNodes
-                                 where node.Name == "list"
-                                 select node)
+            foreach (XmlNode node in inputDoc.ChildNodes)
             {
+                if (node.Name != Resources.List_LowCase)
+                {
+                    continue;
+                }
+                
                 foreach (XmlElement item in node.ChildNodes)
                 {
-                    var xmlGroupAttribute = item.Attributes["group"];
-                    var xmlNameAttribute = item.Attributes["name"];
+                    var xmlGroupAttribute = item.Attributes[Resources.Group_LowCase];
+                    var xmlNameAttribute = item.Attributes[Resources.Name_LowCase];
                     if (xmlGroupAttribute == null || xmlNameAttribute == null) throw new FormatException();
                     list.Add(new ItemInfo(xmlGroupAttribute.Value, xmlNameAttribute.Value));
                 }
-
             }
 
-            SetItemsCountAttribute(inputDoc, list);
+            SetItemsCountAttributeToList(inputDoc, list);
 
             inputDoc.Save(pathToInputFile);
             return list;
         }
 
-        private static void SetItemsCountAttribute(XmlDocument inputDoc, List<ItemInfo> list)
+        private static void SetItemsCountAttributeToList(XmlDocument inputDoc, List<ItemInfo> list)
         {
-            var itemsCountAttribute = inputDoc.CreateAttribute("itemsCount");
+            var itemsCountAttribute = inputDoc.CreateAttribute(Resources.ItemsCount_LowCase);
             itemsCountAttribute.Value = list.Count.ToString();
             inputDoc.ChildNodes.GetEnumerator()
                 .ToIEnumerable<XmlNode>()
-                .FirstOrDefault(x => x.Name == "list")?.Attributes?.Append(itemsCountAttribute);
+                .FirstOrDefault(x => x.Name == Resources.List_LowCase)?
+                .Attributes?.Append(itemsCountAttribute);
         }
     }
 }

@@ -6,7 +6,21 @@ namespace XSLT.Implementations
     {
         public string GetFileName()
         {
-            throw new NotImplementedException();
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    return openFileDialog.FileName;
+                }
+            }
+
+            return "";
         }
     }
 }
