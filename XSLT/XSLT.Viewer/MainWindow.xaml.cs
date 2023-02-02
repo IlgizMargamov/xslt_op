@@ -17,7 +17,8 @@ namespace XSLT.Viewer
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
-            m_model.Browse();
+            var tag = (sender as System.Windows.Controls.Button).Tag.ToString();
+            m_model.Browse(tag);
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
