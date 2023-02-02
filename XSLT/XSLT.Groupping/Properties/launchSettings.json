@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "XSLT.Groupping": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\Gizon\\Desktop\\xslt\\XSLT\\XSLT.Groupping\\Resources\\List.xml C:\\Users\\Gizon\\Desktop\\xslt\\XSLT\\XSLT.Groupping\\Resources\\Groupped.xml"
+    }
+  }
+}
