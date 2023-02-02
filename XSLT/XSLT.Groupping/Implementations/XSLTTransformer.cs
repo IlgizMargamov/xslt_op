@@ -9,7 +9,7 @@ namespace Library.Implementations
 {
     public class XSLTTransformer : IXSLTTransformer
     {
-        public IXSLTTransformerOutput TransformFile(string pathToInputFile, string pathToOutputFile)
+        public IXSLTTransformerOutput TransformFileFromListToGroups(string pathToInputFile, string pathToOutputFile)
         {
             var list = GetListFromInputFile(pathToInputFile);
             var grouppedList = list.OrderBy(x => x.ItemGroup).GroupBy(x => x.ItemGroup);

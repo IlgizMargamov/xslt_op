@@ -66,7 +66,7 @@ namespace XSLT.Viewer.ViewModel
         {
             try
             {
-                var result = m_xSLTTransformer.TransformFile(PathToInputFile, PathToOutputFile);
+                var result = m_xSLTTransformer.TransformFileFromListToGroups(PathToInputFile, PathToOutputFile);
                 Items = new ObservableCollection<ItemInfo>(result.ItemsList);
                 Groups = new ObservableCollection<GroupInfo>(result.Groups);
             }
