@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <groups>
-  <group name="1">
+  <group name="1" itemCount="6">
     <item name="1" />
     <item name="2" />
     <item name="11" />
@@ -8,7 +8,7 @@
     <item name="33" />
     <item name="444" />
   </group>
-  <group name="2">
+  <group name="2" itemCount="6">
     <item name="3" />
     <item name="4" />
     <item name="111" />
@@ -16,7 +16,7 @@
     <item name="333" />
     <item name="555" />
   </group>
-  <group name="3">
+  <group name="3" itemCount="3">
     <item name="5" />
     <item name="44" />
     <item name="55" />

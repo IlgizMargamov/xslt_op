@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XSLT.Viewer"
         mc:Ignorable="d"
-        Title="XSLT viewer" Height="450" Width="600" ResizeMode="NoResize">
+        Title="XSLT viewer" Height="450" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -32,10 +32,10 @@
             />
         <Button Tag="input"
             Content="Browse..." 
-                HorizontalAlignment="Right"
                 Grid.Column="1"
                 Height="30" 
-                Margin="1,1,3,1"
+                Width="100"
+                Margin="70,1,3,1"
                 x:Name="BrowseButton"
                 Click="BrowseButton_Click"/>
         <Label Grid.Row="1" VerticalAlignment="Top" Height="30" Content="Path to output file:"/>
@@ -52,10 +52,9 @@
             />
         <Button Tag="output"
             Content="Browse..." 
-                HorizontalAlignment="Right"
                 Grid.Column="1" Grid.Row="1"
                 Height="30" 
-                Margin="1,1,3,1"
+                Margin="70,1,3,1"
                 Click="BrowseButton_Click"/>
         <DataGrid ItemsSource="{Binding Items}" Grid.Column="2" Grid.RowSpan="4" AutoGenerateColumns="False">
             <DataGrid.Columns>
@@ -66,7 +65,7 @@
 
         <DataGrid ItemsSource="{Binding Groups}" Grid.Column="3"  Grid.RowSpan="4" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Groups" Binding="{Binding GroupName}"/>
+                <DataGridTextColumn Header="GroupName" Binding="{Binding GroupName}"/>
                 <DataGridTextColumn Header="ItemsCount" Binding="{Binding ItemsCount}"/>
             </DataGrid.Columns>
         </DataGrid>

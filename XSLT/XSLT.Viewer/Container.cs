@@ -1,7 +1,8 @@
 ﻿using Ninject;
 using System;
-using System.Resources;
 using System.Windows;
+using XSLT.Implementations;
+using XSLT.Interfaces;
 
 namespace XSLT.Viewer
 {
@@ -12,7 +13,8 @@ namespace XSLT.Viewer
         static Container()
         {
             container = new StandardKernel();
-            //container.Bind<ITeklaElementsCreator>().To<TeklaElementsCreator>();
+            container.Bind<IFileProvider>().To<FileProvider>();
+            container.Bind<IXSLTTransformer>().To<XSLTTransformer>();
         }
 
         public static T Get<T>()

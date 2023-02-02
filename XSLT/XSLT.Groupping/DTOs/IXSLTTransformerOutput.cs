@@ -8,5 +8,13 @@ namespace XSLT.DTOs
 {
     public class IXSLTTransformerOutput
     {
+        public List<ItemInfo> ItemsList {get; }
+        public List<GroupInfo> Groups { get; }
+
+        public IXSLTTransformerOutput(List<ItemInfo> itemsList, List<GroupInfo> groups)
+        {
+            ItemsList = itemsList;
+            Groups = groups;
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 using XSLT.DTOs;
 using XSLT.Interfaces;
 
@@ -51,22 +52,31 @@ namespace XSLT.Viewer
             var outputInput = XSLT.Enums.EnumConverter.GetOutputInput(tag);
             switch (outputInput)
             {
-                case Enums.OutputInput.Unknown:
-                    break;
                 case Enums.OutputInput.Output:
                     PathToOutputFile = m_fileProvider.GetFileName();
                     break;
                 case Enums.OutputInput.Input:
                     PathToInputFile = m_fileProvider.GetFileName();
                     break;
+                case Enums.OutputInput.Unknown:
                 default:
+                    MessageBox.Show("Internal error");
                     break;
             }
         }
 
         public void Start()
         {
-            m_xSLTTransformer.TransformFile(PathToInputFile, PathToOutputFile);
+            try
+            {
+                var result = m_xSLTTransformer.TransformFile(PathToInputFile, PathToOutputFile);
+                Items = new ObservableCollection<ItemInfo>(result.ItemsList);
+                Groups = new ObservableCollection<GroupInfo>(result.Groups);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

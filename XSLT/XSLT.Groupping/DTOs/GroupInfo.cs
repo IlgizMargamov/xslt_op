@@ -2,12 +2,12 @@
 {
     public class GroupInfo
     {
-        public string Name { get; set; }
+        public string GroupName { get; set; }
         public int ItemsCount { get; set; }
 
         public GroupInfo(string name, int itemsCount)
         {
-            Name = name;
+            GroupName = name;
             ItemsCount = itemsCount;
         }
     }
