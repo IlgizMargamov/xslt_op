@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using System.Windows;
+using XSLT.Viewer.View;
 
 namespace XSLT.Viewer
 {

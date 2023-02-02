@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Library.BaseViewModels;
+using Library.DTOs;
+using Library.Interfaces;
+using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using XSLT.DTOs;
-using XSLT.Interfaces;
 
-namespace XSLT.Viewer
+namespace XSLT.Viewer.ViewModel
 {
     public class MainWindowVM : BaseViewModel
     {
@@ -31,7 +26,7 @@ namespace XSLT.Viewer
             get => GetColl<ItemInfo>();
             set => SetColl(value);
         }
-        
+
         public ObservableCollection<GroupInfo> Groups
         {
             get => GetColl<GroupInfo>();
@@ -49,18 +44,18 @@ namespace XSLT.Viewer
 
         public void Browse(string tag)
         {
-            var outputInput = XSLT.Enums.EnumConverter.GetOutputInput(tag);
+            var outputInput = Library.Enums.EnumConverter.GetOutputInput(tag);
             var filePath = m_fileProvider.GetFileName();
             var isFilePathEmpty = filePath.Equals(string.Empty);
             switch (outputInput)
             {
-                case Enums.OutputInput.Output:
+                case Library.Enums.OutputInput.Output:
                     PathToOutputFile = isFilePathEmpty ? PathToOutputFile : filePath;
                     break;
-                case Enums.OutputInput.Input:
+                case Library.Enums.OutputInput.Input:
                     PathToInputFile = isFilePathEmpty ? PathToInputFile : filePath;
                     break;
-                case Enums.OutputInput.Unknown:
+                case Library.Enums.OutputInput.Unknown:
                 default:
                     MessageBox.Show("Internal error");
                     break;

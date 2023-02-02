@@ -1,4 +1,4 @@
-﻿namespace XSLT.Interfaces
+﻿namespace Library.Interfaces
 {
     public interface IFileProvider
     {

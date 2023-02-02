@@ -1,6 +1,7 @@
 ﻿using System.Windows;
+using XSLT.Viewer.ViewModel;
 
-namespace XSLT.Viewer
+namespace XSLT.Viewer.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

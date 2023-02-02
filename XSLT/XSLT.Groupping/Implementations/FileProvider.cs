@@ -1,6 +1,6 @@
-﻿using XSLT.Interfaces;
+﻿using Library.Interfaces;
 
-namespace XSLT.Implementations
+namespace Library.Implementations
 {
     public class FileProvider : IFileProvider
     {

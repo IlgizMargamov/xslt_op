@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace XSLT.Extensions
+namespace Library.Extensions
 {
     public static class Enumerator_Extensions
     {

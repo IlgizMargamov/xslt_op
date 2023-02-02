@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XSLT.Viewer
+namespace Library.BaseViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

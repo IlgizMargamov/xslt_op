@@ -1,4 +1,4 @@
-﻿namespace XSLT.DTOs
+﻿namespace Library.DTOs
 {
     public class ItemInfo
     {

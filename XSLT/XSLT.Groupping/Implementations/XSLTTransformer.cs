@@ -1,10 +1,11 @@
-﻿using System.Xml;
+﻿using Library;
+using Library.DTOs;
+using Library.Extensions;
+using Library.Interfaces;
+using System.Xml;
 using System.Xml.Linq;
-using XSLT.DTOs;
-using XSLT.Extensions;
-using XSLT.Interfaces;
 
-namespace XSLT.Implementations
+namespace Library.Implementations
 {
     public class XSLTTransformer : IXSLTTransformer
     {

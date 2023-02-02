@@ -1,8 +1,8 @@
-﻿using Ninject;
+﻿using Library.Implementations;
+using Library.Interfaces;
+using Ninject;
 using System;
 using System.Windows;
-using XSLT.Implementations;
-using XSLT.Interfaces;
 
 namespace XSLT.Viewer
 {

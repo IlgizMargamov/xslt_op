@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XSLT.DTOs
+namespace Library.DTOs
 {
     public class IXSLTTransformerOutput
     {

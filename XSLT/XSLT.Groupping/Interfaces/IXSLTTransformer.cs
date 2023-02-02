@@ -1,6 +1,6 @@
-﻿using XSLT.DTOs;
+﻿using Library.DTOs;
 
-namespace XSLT.Interfaces
+namespace Library.Interfaces
 {
     public interface IXSLTTransformer
     {

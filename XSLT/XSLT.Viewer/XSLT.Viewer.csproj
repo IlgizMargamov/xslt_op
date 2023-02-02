@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XSLT.Groupping\XSLT.csproj" />
+    <ProjectReference Include="..\XSLT.Groupping\Library.csproj" />
   </ItemGroup>
 
 </Project>

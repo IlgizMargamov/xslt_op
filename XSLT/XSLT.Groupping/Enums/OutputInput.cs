@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XSLT.Enums
+namespace Library.Enums
 {
     public enum OutputInput
     {
