@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using XSLT.DTOs;
 
 namespace XSLT.Interfaces
 {
-    internal interface IXSLTTransformer
+    public interface IXSLTTransformer
     {
+        IXSLTTransformerOutput TransformFile(string pathToInputFile, string pathToOutputFile);
     }
 }
